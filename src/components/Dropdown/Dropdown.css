@@ -1,0 +1,38 @@
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-button {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-body {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    padding: 15px;
+    margin-left: 20px;
+    max-height: 300px;
+    /* Set to the expanded height */
+    transform: translateY(-100%);
+    /* Start above the container */
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    display: none;
+}
+
+.dropdown-container.open .dropdown-body {
+    transform: translateY(0);
+    display: block;
+    /* Slide down to the container's level */
+}
