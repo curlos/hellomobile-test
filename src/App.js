@@ -89,6 +89,32 @@ function App() {
             );
           })}
         </Dropdown>
+
+        <Dropdown>
+          {Object.keys(selectedBrands).sort().map((brand) => {
+            return (
+              <div className="d-flex flex-wrap">
+                <input type="checkbox" checked={isChecked(brand)} onChange={() => {
+                  setSelectedBrands({ ...selectedBrands, [brand]: !selectedBrands[brand] });
+                }} />
+                {brand}
+              </div>
+            );
+          })}
+        </Dropdown>
+
+        <Dropdown>
+          {Object.keys(selectedBrands).sort().map((brand) => {
+            return (
+              <div className="d-flex flex-wrap">
+                <input type="checkbox" checked={isChecked(brand)} onChange={() => {
+                  setSelectedBrands({ ...selectedBrands, [brand]: !selectedBrands[brand] });
+                }} />
+                {brand}
+              </div>
+            );
+          })}
+        </Dropdown>
       </div>
 
 
